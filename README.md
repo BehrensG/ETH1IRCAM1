@@ -4,14 +4,9 @@
 
 ## Images
 
-<p align="center"> ETH1IRCAM1 V1.0 </p>
-
-<p align="center">
-  <img src="./IMG/ETH1IRCAM1_V1.0.jpg" width="1074" />
- </p>
- 
-<p align="center">
 <p align="center"> Example of radiometric and RGB images. - zoom 2x. </p>
+
+<p align="left">
   <img src="./IMG/RAW14_zoom2x.PNG" width="300" />
   <img src="./IMG/RGB888_zoom2x.PNG" width="300" /> 
 </p>
