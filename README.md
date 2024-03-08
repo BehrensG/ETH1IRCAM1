@@ -12,8 +12,8 @@
  
 <p align="center">
 <p align="center"> Example of radiometric image (left) and RGB (right) - zoom 2x. </p>
-  <img src="./IMG/RAW14_zoom2x.PNG" width="320" />
-  <img src="./IMG/RGB888_zoom2x.PNG" width="320" /> 
+  <img src="./IMG/RAW14_zoom2x.PNG" width="300" />
+  <img src="./IMG/RGB888_zoom2x.PNG" width="300" /> 
  </p>
  
  ## Resources
