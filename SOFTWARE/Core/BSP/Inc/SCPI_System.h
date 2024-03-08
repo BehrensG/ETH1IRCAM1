@@ -13,7 +13,7 @@
 
 #define SECURITY_ON 1
 #define SECURITY_OFF 0
-#define LAN_CURRENT 1
+#define Lan_CURRENT 1
 #define STATIC 1
 #define DEFAULT 2
 #define NET_STR_WRONG_FORMAT 1
@@ -32,20 +32,22 @@ enum e_eeprom_states
 	EEPROM_DEFAULT,
 };
 
-scpi_result_t SCPI_SystemCommunicateLANIPAddress(scpi_t * context);
-scpi_result_t SCPI_SystemCommunicateLANIPAddressQ(scpi_t * context);
-scpi_result_t SCPI_SystemCommunicateLANIPSmask(scpi_t * context);
-scpi_result_t SCPI_SystemCommunicateLANIPSmaskQ(scpi_t * context);
-scpi_result_t SCPI_SystemCommunicateLANGateway(scpi_t * context);
-scpi_result_t SCPI_SystemCommunicateLANGatewayQ(scpi_t * context);
-scpi_result_t SCPI_SystemCommunicateLANMAC(scpi_t * context);
-scpi_result_t SCPI_SystemCommunicateLANMACQ(scpi_t * context);
-scpi_result_t SCPI_SystemCommunicateLANPort(scpi_t * context);
-scpi_result_t SCPI_SystemCommunicateLANPortQ(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanIpAddress(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanIpAddressQ(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanIpSmask(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanIpSmaskQ(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanGateway(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanGatewayQ(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanMac(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanMacQ(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanTcpIpPort(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanTcpIpPortQ(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanUdpPort(scpi_t * context);
+scpi_result_t SCPI_SystemCommunicateLanUdpPortQ(scpi_t * context);
 scpi_result_t SCPI_SystemCommunicationLanUpdate(scpi_t * context);
 scpi_result_t SCPI_SystemSecureState(scpi_t * context);
 scpi_result_t SCPI_SystemSecureStateQ(scpi_t * context);
-scpi_result_t SCPI_SystemServiceEEPROM(scpi_t * context);
+scpi_result_t SCPI_SystemServiceEeprom(scpi_t * context);
 scpi_result_t SCPI_SystemTemperatureUnit(scpi_t * context);
 scpi_result_t SCPI_SystemTemperatureUnitQ(scpi_t * context);
 

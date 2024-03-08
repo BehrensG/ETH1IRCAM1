@@ -49,6 +49,8 @@ void BSP_Init_DefualtEEPROM()
 	bsp.eeprom.structure.ip4_static.netmask[2] = NETMASK_ADDRESS_2;
 	bsp.eeprom.structure.ip4_static.netmask[3] = NETMASK_ADDRESS_3;
 
+	bsp.eeprom.structure.ip4_static.tcp_port = 2000;
+	bsp.eeprom.structure.ip4_static.udp_port = 16384;
 
 	strncpy(bsp.eeprom.structure.service.password, PASSWORD, STRING_LENGTH);
 	strncpy(bsp.eeprom.structure.info.serial_number, SCPI_IDN4, STRING_LENGTH);
@@ -81,6 +83,9 @@ static void BSP_Init_IP4Current()
 	bsp.ip4_current.netmask[1] = bsp.eeprom.structure.ip4_static.netmask[1];
 	bsp.ip4_current.netmask[2] = bsp.eeprom.structure.ip4_static.netmask[2];
 	bsp.ip4_current.netmask[3] = bsp.eeprom.structure.ip4_static.netmask[3];
+
+	bsp.ip4_current.tcp_port = bsp.eeprom.structure.ip4_static.tcp_port;
+	bsp.ip4_current.udp_port = bsp.eeprom.structure.ip4_static.udp_port;
 }
 
 bsp_result_t BSP_Init()

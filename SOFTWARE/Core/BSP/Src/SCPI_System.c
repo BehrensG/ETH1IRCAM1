@@ -12,7 +12,7 @@ extern bsp_t bsp;
 extern bsp_eeprom_t eeprom_default;
 extern scpi_choice_def_t scpi_boolean_select[];
 
-scpi_choice_def_t LAN_state_select[] =
+scpi_choice_def_t Lan_state_select[] =
 {
 { "CURRent", 1 },
 { "STATic", 2 },
@@ -31,13 +31,16 @@ scpi_choice_def_t EEPROM_state_select[] =
 { "DEFault", SYS_DEFAULT },
 SCPI_CHOICE_LIST_END };
 
-/*
- * @INFO:
- * Private function to convert a IP string (format nnnn.nnnn.nnnn.nnnn) to a array of uint8_t. The conversion is need for the lwIP Ethernet function.
+/* --------------------------------------------------------------------------------------------------------------------
  *
+ * @INFO:
+ * Private function to convert a IP string (format nnnn.nnnn.nnnn.nnnn) to a array of uint8_t. The conversion is need
+ * for the lwIP Ethernet function.
+ *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-static uint8_t SCPI_StringToIP4Array(const char *ip_string, uint8_t *ip_array)
+static uint8_t SCPI_StringToIp4Array(const char *ip_string, uint8_t *ip_array)
 {
 
 	/* A pointer to the next digit to process. */
@@ -81,10 +84,13 @@ static uint8_t SCPI_StringToIP4Array(const char *ip_string, uint8_t *ip_array)
 	return NET_STR_OK;
 }
 
-/*
- * @INFO:
- * Private function to convert a MAC string (format xx:xx:xx:xx:xx:xx or xx-xx-xx-xx-xx-xx) to a array of uint8_t. The conversion is need for the lwIP Ethernet function.
+/* --------------------------------------------------------------------------------------------------------------------
  *
+ * @INFO:
+ * Private function to convert a MAC string (format xx:xx:xx:xx:xx:xx or xx-xx-xx-xx-xx-xx) to a array of uint8_t.
+ * The conversion is need for the lwIP Ethernet function.
+ *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
 static uint8_t SCPI_StringToMACArray(const char *MAC_string, uint8_t *MAC_array)
@@ -112,22 +118,25 @@ static uint8_t SCPI_StringToMACArray(const char *MAC_string, uint8_t *MAC_array)
 	return NET_STR_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:IPADdress "<address>"
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:IPADdress "<address>"
  *
  * @INFO:
- * Assigns a static Internet Protocol (IP) address for the instrument. If DHCP is enabled (SYSTem:COMMunicate:LAN:DHCP ON), the specified static IP address is not used.
+ * Assigns a static Internet Protocol (IP) address for the instrument. If DHCP is enabled
+ * (SYSTem:COMMunicate:Lan:DHCP ON), the specified static IP address is not used.
  *
  * @PARAMETERS:
  * 				"<address>"		"nnnn.nnnn.nnnn.nnnn" - where nnnn is a number from 0-255. Default "192.168.1.126".
  *
  * @NOTE:
- * If you change this setting, you must send SYSTem:COMMunicate:LAN:UPDate to activate the new setting.
+ * If you change this setting, you must send SYSTem:COMMunicate:Lan:UPDate to activate the new setting.
  * This setting is non-volatile; it is not changed by power cycling, a Factory Reset (*RST).
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANIPAddress(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanIpAddress(scpi_t *context)
 {
 	char str[16] =
 	{ 0 };
@@ -141,7 +150,7 @@ scpi_result_t SCPI_SystemCommunicateLANIPAddress(scpi_t *context)
 		return SCPI_RES_ERR;
 	}
 
-	conv_result = SCPI_StringToIP4Array(str, numb);
+	conv_result = SCPI_StringToIp4Array(str, numb);
 
 	switch (conv_result)
 	{
@@ -167,33 +176,35 @@ scpi_result_t SCPI_SystemCommunicateLANIPAddress(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:IPADdress? [{LAN_CURRENT|STATic}]
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:IPADdress? [{Lan_CURRENT|STATic}]
  *
  * @INFO:
  * Query the IP4 address. Result is a string. Typical return "192.168.1.126"
  *
  * @PARAMETERS:
- * 				LAN_CURRENT		read the value LAN_CURRENTly being used by the instrument (default)
- * 				STATic		read the value LAN_CURRENTly stored in nonvolatile memory within the instrument
+ * 				Lan_CURRENT		read the value Lan_CURRENTly being used by the instrument (default)
+ * 				STATic		read the value Lan_CURRENTly stored in nonvolatile memory within the instrument
  *
  * @NOTE:
  * Readout may not be the actual address used by the instrument if DHCP is enabled.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANIPAddressQ(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanIpAddressQ(scpi_t *context)
 {
 	int32_t value = 0;
 	char str[16] =
 	{ 0 };
 
-	if (!SCPI_ParamChoice(context, LAN_state_select, &value, FALSE))
+	if (!SCPI_ParamChoice(context, Lan_state_select, &value, FALSE))
 	{
 		return SCPI_RES_ERR;
 	}
 
-	if (LAN_CURRENT == value)
+	if (Lan_CURRENT == value)
 	{
 		sprintf(str, "%d.%d.%d.%d", bsp.ip4_current.ip[0],
 				bsp.ip4_current.ip[1], bsp.ip4_current.ip[2],
@@ -211,23 +222,26 @@ scpi_result_t SCPI_SystemCommunicateLANIPAddressQ(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:SMASk "<mask>"
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:SMASk "<mask>"
  *
  * @INFO:
- * Assigns a subnet mask for the instrument to use in determining whether a client IP address is on the same local subnet.
+ * Assigns a subnet mask for the instrument to use in determining whether a client IP address is on the same local
+ * subnet.
  *
  * @PARAMETERS:
  * 				"<mask>"	"nnnn.nnnn.nnnn.nnnn" - where nnnn is a number from 0-255. Default "255.255.255.0".
  *
  * @NOTE:
  * A value of "0.0.0.0" or "255.255.255.255" indicates that subnetting is not being used.
- * If you change this setting, you must send SYSTem:COMMunicate:LAN:UPDate to activate the new setting.
+ * If you change this setting, you must send SYSTem:COMMunicate:Lan:UPDate to activate the new setting.
  * This setting is non-volatile; it is not changed by power cycling, a Factory Reset (*RST).
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANIPSmask(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanIpSmask(scpi_t *context)
 {
 	char str[16] =
 	{ 0 };
@@ -241,7 +255,7 @@ scpi_result_t SCPI_SystemCommunicateLANIPSmask(scpi_t *context)
 		return SCPI_RES_ERR;
 	}
 
-	conv_result = SCPI_StringToIP4Array(str, numb);
+	conv_result = SCPI_StringToIp4Array(str, numb);
 
 	switch (conv_result)
 	{
@@ -267,32 +281,34 @@ scpi_result_t SCPI_SystemCommunicateLANIPSmask(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:SMASk? [{LAN_CURRENT|STATic}]
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:SMASk? [{Lan_CURRENT|STATic}]
  *
  * @INFO:
  * Query IP4 subnet mask. Result is a string. Typical return "255.255.255.0".
  *
  * @PARAMETERS:
- * 				LAN_CURRENT		read the value LAN_CURRENTly being used by the instrument (default)
- * 				STATic		read the value LAN_CURRENTly stored in nonvolatile memory within the instrument
+ * 				Lan_CURRENT		read the value Lan_CURRENTly being used by the instrument (default)
+ * 				STATic		read the value Lan_CURRENTly stored in nonvolatile memory within the instrument
  *
  * @NOTE:
  * Readout may not be the actual mask used by the instrument if DHCP is enabled.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANIPSmaskQ(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanIpSmaskQ(scpi_t *context)
 {
 	int32_t value = 0;
 	char str[16] =
 	{ 0 };
 
-	if (!SCPI_ParamChoice(context, LAN_state_select, &value, FALSE))
+	if (!SCPI_ParamChoice(context, Lan_state_select, &value, FALSE))
 	{
-		value = LAN_CURRENT;
+		value = Lan_CURRENT;
 	}
-	if (LAN_CURRENT == value)
+	if (Lan_CURRENT == value)
 	{
 		sprintf(str, "%d.%d.%d.%d", bsp.ip4_current.netmask[0],
 				bsp.ip4_current.netmask[1], bsp.ip4_current.netmask[2],
@@ -310,21 +326,24 @@ scpi_result_t SCPI_SystemCommunicateLANIPSmaskQ(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:GATEway "<gateway>"
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:GATEway "<gateway>"
  *
  * @INFO:
- * Assigns a gateway address for the instrument. A gateway IP refers to a device on a network which sends local network traffic to other networks.
+ * Assigns a gateway address for the instrument. A gateway IP refers to a device on a network which sends local network
+ * traffic to other networks.
  *
  * @PARAMETERS:
  * 				"<gateway>"	"nnnn.nnnn.nnnn.nnnn" - where nnnn is a number from 0-255. Default "192.168.1.1".
  *
  * @NOTE:
- * If you change this setting, you must send SYSTem:COMMunicate:LAN:UPDate to activate the new setting.
+ * If you change this setting, you must send SYSTem:COMMunicate:Lan:UPDate to activate the new setting.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANGateway(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanGateway(scpi_t *context)
 {
 	char gateway_str[16] =
 	{ 0 };
@@ -338,7 +357,7 @@ scpi_result_t SCPI_SystemCommunicateLANGateway(scpi_t *context)
 		return SCPI_RES_ERR;
 	}
 
-	conv_result = SCPI_StringToIP4Array(gateway_str, gateway_numb);
+	conv_result = SCPI_StringToIp4Array(gateway_str, gateway_numb);
 
 	switch (conv_result)
 	{
@@ -364,25 +383,27 @@ scpi_result_t SCPI_SystemCommunicateLANGateway(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:GATEway? [{LAN_CURRENT|STATic}]
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:GATEway? [{Lan_CURRENT|STATic}]
  *
  * @INFO:
  * Query the gateway address. Typical return "192.168.1.1".
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANGatewayQ(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanGatewayQ(scpi_t *context)
 {
 	int32_t value = 0;
 	char str[16] =
 	{ 0 };
 
-	if (!SCPI_ParamChoice(context, LAN_state_select, &value, FALSE))
+	if (!SCPI_ParamChoice(context, Lan_state_select, &value, FALSE))
 	{
-		value = LAN_CURRENT;
+		value = Lan_CURRENT;
 	}
-	if (LAN_CURRENT == value)
+	if (Lan_CURRENT == value)
 	{
 
 		sprintf(str, "%d.%d.%d.%d", bsp.ip4_current.gateway[0],
@@ -402,8 +423,9 @@ scpi_result_t SCPI_SystemCommunicateLANGatewayQ(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:MAC "<MAC_address>"
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:MAC "<MAC_address>"
  *
  * @INFO:
  * Assign a new MAC address to the device.
@@ -414,9 +436,10 @@ scpi_result_t SCPI_SystemCommunicateLANGatewayQ(scpi_t *context)
  * @NOTE:
  * To use this function the device must be first unlocked using the SYSTem:SECure:STATe command.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANMAC(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanMac(scpi_t *context)
 {
 	uint8_t str[18] =
 	{ 0 };
@@ -464,15 +487,17 @@ scpi_result_t SCPI_SystemCommunicateLANMAC(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:MAC?
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:MAC?
  *
  * @INFO:
  * Query the device MAC address. The default value is "00:80:E1:00:00:00".
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANMACQ(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanMacQ(scpi_t *context)
 {
 	char str[18] =
 	{ 0 };
@@ -500,8 +525,9 @@ scpi_result_t SCPI_SystemCommunicateLANMACQ(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:PORT <numeric_value>
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:PORT <numeric_value>
  *
  * @INFO:
  * Set the TCP/IP port number.
@@ -510,11 +536,12 @@ scpi_result_t SCPI_SystemCommunicateLANMACQ(scpi_t *context)
  * 				<numeric_value>		port value. Valid values are 0 - 65535. Default value is 2000.
  *
  * @NOTE:
- * If you change this setting, you must send SYSTem:COMMunicate:LAN:UPDate to activate the new setting.
+ * If you change this setting, you must send SYSTem:COMMunicate:Lan:UPDate to activate the new setting.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANPort(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanTcpIpPort(scpi_t *context)
 {
 	uint32_t port = 0;
 
@@ -534,24 +561,68 @@ scpi_result_t SCPI_SystemCommunicateLANPort(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:PORT?
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:PORT?
  *
  * @INFO:
  * Query the TCP/IP port number. Typical result 2000.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemCommunicateLANPortQ(scpi_t *context)
+scpi_result_t SCPI_SystemCommunicateLanTcpIpPortQ(scpi_t *context)
 {
 	int32_t value = 0;
 
-	if (!SCPI_ParamChoice(context, LAN_state_select, &value, TRUE))
+	if (!SCPI_ParamChoice(context, Lan_state_select, &value, TRUE))
 	{
 		return SCPI_RES_ERR;
 	}
 
-	if (LAN_CURRENT == value)
+	if (Lan_CURRENT == value)
+	{
+		SCPI_ResultUInt16(context, bsp.ip4_current.udp_port);
+	}
+	else if (STATIC == value)
+	{
+		SCPI_ResultUInt16(context, bsp.eeprom.structure.ip4_static.tcp_port);
+	}
+
+	return SCPI_RES_OK;
+}
+
+scpi_result_t SCPI_SystemCommunicateLanUdpPort(scpi_t *context)
+{
+	uint32_t port = 0;
+
+	if (!SCPI_ParamUInt32(context, &port, TRUE))
+	{
+		return SCPI_RES_ERR;
+	}
+
+	if (port > ETH_PORT_MAX_VAL)
+	{
+		SCPI_ErrorPush(context, SCPI_ERROR_TOO_MANY_DIGITS);
+		return SCPI_RES_ERR;
+	}
+
+	bsp.ip4_current.udp_port = (uint16_t) port;
+
+	return SCPI_RES_OK;
+}
+
+
+scpi_result_t SCPI_SystemCommunicateLanUdpPortQ(scpi_t *context)
+{
+	int32_t value = 0;
+
+	if (!SCPI_ParamChoice(context, Lan_state_select, &value, TRUE))
+	{
+		return SCPI_RES_ERR;
+	}
+
+	if (Lan_CURRENT == value)
 	{
 		SCPI_ResultUInt16(context, bsp.ip4_current.tcp_port);
 	}
@@ -563,15 +634,17 @@ scpi_result_t SCPI_SystemCommunicateLANPortQ(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
- * SYSTem:COMMunicate:LAN:UPDate
+/* --------------------------------------------------------------------------------------------------------------------
+ *
+ * SYSTem:COMMunicate:Lan:UPDate
  *
  * @INFO:
- * Stores any changes made to the LAN settings into non-volatile memory.
+ * Stores any changes made to the Lan settings into non-volatile memory.
  *
  * @NOTE:
  * This command must be sent after changing the settings for DHCP, gateway, hostname, IP address, subnet mask.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
 scpi_result_t SCPI_SystemCommunicationLanUpdate(scpi_t *context)
@@ -605,6 +678,9 @@ scpi_result_t SCPI_SystemCommunicationLanUpdate(scpi_t *context)
 	bsp.eeprom.structure.ip4_static.netmask[2] = bsp.ip4_current.netmask[2];
 	bsp.eeprom.structure.ip4_static.netmask[3] = bsp.ip4_current.netmask[3];
 
+	bsp.eeprom.structure.ip4_static.tcp_port = bsp.ip4_current.tcp_port;
+	bsp.eeprom.structure.ip4_static.udp_port = bsp.ip4_current.udp_port;
+
 	if (BSP_OK == EEPROM_Write(&bsp.eeprom, EEPROM_CFG_SIZE))
 	{
 		return SCPI_RES_OK;
@@ -617,11 +693,13 @@ scpi_result_t SCPI_SystemCommunicationLanUpdate(scpi_t *context)
 
 }
 
-/*
+/* --------------------------------------------------------------------------------------------------------------------
+ *
  * SYSTem:SECure:STATe {ON|OFF|1|0} "<password>"
  *
  * @INFO:
- * Enables or disables device configuration protection. If the protection is disabled the user can reset the EEPROM of all MCU on the PCB,
+ * Enables or disables device configuration protection. If the protection is disabled the user can reset the EEPROM
+ * of all MCU on the PCB,
  * change the device information and enable the calibration function.
  *
  * @PARAMETERS:
@@ -629,6 +707,7 @@ scpi_result_t SCPI_SystemCommunicationLanUpdate(scpi_t *context)
  * 				OFF or 0		Disable device protection.
  * 				"<password>"	Password string. The default password is "ETH1CLCR1". Max. password lenght is PASSWORD_LENGTH.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
 scpi_result_t SCPI_SystemSecureState(scpi_t *context)
@@ -664,12 +743,14 @@ scpi_result_t SCPI_SystemSecureState(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
+/* --------------------------------------------------------------------------------------------------------------------
+ *
  * SYSTem:SECure:STATe?
  *
  * @INFO:
  * Query the device security state. Returns 1 or 0.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
 scpi_result_t SCPI_SystemSecureStateQ(scpi_t *context)
@@ -678,7 +759,8 @@ scpi_result_t SCPI_SystemSecureStateQ(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
+/* --------------------------------------------------------------------------------------------------------------------
+ *
  * SYSTem:SERVice:EEPROM {RESET|DEFault}
  *
  * @INFO:
@@ -691,9 +773,10 @@ scpi_result_t SCPI_SystemSecureStateQ(scpi_t *context)
  * @NOTE:
  * To use this function the device must be first unlocked using the SYSTem:SECure:STATe command.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
-scpi_result_t SCPI_SystemServiceEEPROM(scpi_t *context)
+scpi_result_t SCPI_SystemServiceEeprom(scpi_t *context)
 {
 	int32_t select = 0;
 
@@ -736,12 +819,14 @@ scpi_result_t SCPI_SystemTemperatureUnit(scpi_t *context)
 	return SCPI_RES_OK;
 }
 
-/*
+/* --------------------------------------------------------------------------------------------------------------------
+ *
  * SYSTem:TEMPerature:UNIT?
  *
  * @INFO:
  * Query the temperature unit. Result can be C, K or F.
  *
+ * --------------------------------------------------------------------------------------------------------------------
  */
 
 scpi_result_t SCPI_SystemTemperatureUnitQ(scpi_t *context)
