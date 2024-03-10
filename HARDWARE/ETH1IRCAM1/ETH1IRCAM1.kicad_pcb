@@ -6857,7 +6857,7 @@
   (gr_text "ETH1IRCAM1 V1.1\nDEFAULT IP: 192.168.1.56\n" (at 125.603 118.11) (layer "F.SilkS") (tstamp 7352fef5-11b4-413a-9369-5a1515c26568)
     (effects (font (size 0.6 0.6) (thickness 0.12) bold) (justify left bottom))
   )
-  (gr_text "SHORT JP401 FOR DEFUALT CONFIGURATION" (at 135.382 82.677) (layer "F.SilkS") (tstamp 9c5ddc07-12a1-48b3-be5e-46ea7337aba0)
+  (gr_text "SHORT JP401 FOR DEFAULT CONFIGURATION" (at 135.382 82.677) (layer "F.SilkS") (tstamp 9c5ddc07-12a1-48b3-be5e-46ea7337aba0)
     (effects (font (size 0.6 0.6) (thickness 0.12) bold) (justify left bottom))
   )
   (gr_text "+24 VDC" (at 178.562 115.697) (layer "F.SilkS") (tstamp e93fb51d-bb12-4a94-ae5a-ba31c942a3a3)

@@ -12,7 +12,4 @@
 
 scpi_result_t SCPI_LeptonImageSnapQ(scpi_t * context);
 
-scpi_result_t SCPI_LeptonImageTimeoutQ(scpi_t * context);
-scpi_result_t SCPI_LeptonImageTimeout(scpi_t * context);
-
 #endif /* BSP_INC_SCPI_LEP_IMG_H_ */

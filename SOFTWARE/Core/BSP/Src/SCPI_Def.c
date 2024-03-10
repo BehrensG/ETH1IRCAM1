@@ -133,6 +133,7 @@ const scpi_command_t scpi_commands[] = {
     {.pattern = "SYSTem:ERRor[:NEXT]?", .callback = SCPI_SystemErrorQ,},
     {.pattern = "SYSTem:ERRor:COUNt?", .callback = SCPI_SystemErrorCountQ,},
     {.pattern = "SYSTem:VERSion?", .callback = SCPI_SystemVersionQ,},
+
 	{.pattern = "SYSTem:COMMunicate:LAN:IPADdress", .callback = SCPI_SystemCommunicateLanIpAddress,},
 	{.pattern = "SYSTem:COMMunicate:LAN:IPADdress?", .callback = SCPI_SystemCommunicateLanIpAddressQ,},
 	{.pattern = "SYSTem:COMMunicate:LAN:SMASk", .callback = SCPI_SystemCommunicateLanIpSmask,},
@@ -149,7 +150,7 @@ const scpi_command_t scpi_commands[] = {
 	{.pattern = "SYSTem:TEMPerature:UNIT", .callback = SCPI_SystemTemperatureUnit,},
 	{.pattern = "SYSTem:TEMPerature:UNIT?", .callback = SCPI_SystemTemperatureUnitQ,},
 	{.pattern = "SYSTem:SERVice:EEPROM", .callback = SCPI_SystemServiceEeprom,},
-	{.pattern = "SYSTem:SERVice:STORe", .callback = SCPI_SystemServiceStore,},
+//	{.pattern = "SYSTem:SERVice:STORe", .callback = SCPI_SystemServiceStore,},
 
 	{.pattern = "LEPton:SYSTem:STATus?", .callback = SCPI_LeptonSystemSystemStatusQ,},
 	{.pattern = "LEPton:SYSTem:SN?", .callback = SCPI_LeptonSystemSerialNumberQ,},
@@ -215,11 +216,10 @@ const scpi_command_t scpi_commands[] = {
 	{.pattern = "LEPton:VIDeo:FREEZe:ENAble:STATe", .callback = SCPI_LeptonVideoFreezeEnableState,},
 	{.pattern = "LEPton:VIDeo:OUTput:FORMat?", .callback = SCPI_LeptonOemVideoOutputFormatQ,},
 	{.pattern = "LEPton:VIDeo:OUTput:FORMat", .callback = SCPI_LeptonOemVideoOutputFormat,},
-
+	{.pattern = "LEPton:VIDeo:TIMEout?", .callback = SCPI_LeptonVideoTimeoutQ,},
+	{.pattern = "LEPton:VIDeo:TIMEout", .callback = SCPI_LeptonVideoTimeout,},
 
 	//{.pattern = "LEPton:IMAGe:SNAP?", .callback = SCPI_LeptonImageSnapQ,},
-	{.pattern = "LEPton:IMAGe:TIMEout?", .callback = SCPI_LeptonImageTimeoutQ,},
-	{.pattern = "LEPton:IMAGe:TIMEout", .callback = SCPI_LeptonImageTimeout,},
 
 	{.pattern = "TS", .callback = SCPI_TS,},
 

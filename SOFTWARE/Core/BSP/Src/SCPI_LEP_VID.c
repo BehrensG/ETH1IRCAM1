@@ -9,6 +9,7 @@
 #include "cmsis_os.h"
 #include "SCPI_LEP_VID.h"
 #include "CCI_VID.h"
+#include "Lepton.h"
 
 /* --------------------------------------------------------------------------------------------------------------------
  *
@@ -267,6 +268,29 @@ scpi_result_t SCPI_LeptonVideoFreezeEnableState(scpi_t * context)
 		SCPI_ErrorPush(context, SCPI_ERROR_DEVICE_ERROR);
 		return SCPI_RES_ERR;
 	}
+
+	return SCPI_RES_OK;
+}
+
+
+extern lep_data_t lepton;
+
+scpi_result_t SCPI_LeptonVideoTimeoutQ(scpi_t * context)
+{
+	SCPI_ResultUInt32(context, lepton.udp_client.timeout);
+	return SCPI_RES_OK;
+}
+
+scpi_result_t SCPI_LeptonVideoTimeout(scpi_t * context)
+{
+	uint32_t timeout;
+
+	if(!SCPI_ParamUInt32(context, &timeout, TRUE))
+	{
+		return SCPI_RES_ERR;
+	}
+
+	lepton.udp_client.timeout = timeout;
 
 	return SCPI_RES_OK;
 }

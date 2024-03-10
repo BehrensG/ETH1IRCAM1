@@ -27,6 +27,7 @@
 #include "LED.h"
 #include "Lepton.h"
 #include "BSP.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -76,6 +77,7 @@ const osMutexAttr_t LeptonMutex_attributes = {
 /* USER CODE BEGIN PV */
 extern osThreadId_t defaultTaskHandle;
 extern const osThreadAttr_t LeptonTask_attributes;
+extern cci_result_t lep_init_status;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -597,7 +599,20 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  LED_Toggle(GREEN, 5, 2000);
+	  if (CCI_NOT_READY == lep_init_status)
+	  {
+		  LED_Control(BLUE, 1);
+		  osDelay(pdMS_TO_TICKS(10));
+	  }
+	  else if (CCI_OK == lep_init_status)
+	  {
+		  LED_Toggle(GREEN, 5, 2000);
+	  }
+	  else
+	  {
+		  LED_Toggle(RED, 5, 2000);
+	  }
+
   }
   /* USER CODE END 5 */
 }

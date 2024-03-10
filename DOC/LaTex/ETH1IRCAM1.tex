@@ -1,0 +1,64 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
+\usepackage[parfill]{parskip}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\definecolor{darkblue}{RGB}{0,0,100}
+
+\geometry{
+    left=2cm,
+    right=2cm,
+    top=2cm,
+    bottom=2cm,
+}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\begin{document}
+
+\part*{\textcolor{darkblue}{SCPI}}
+
+\section*{\textcolor{darkblue}{\textbf{Introduction to SCPI}}}
+
+SCPI, or Standard Commands for Programmable Instruments, is a standardized language used for controlling
+and communicating with test and measurement instruments. It provides a unified framework for remote instrument
+control, ensuring interoperability across different manufacturers and models. 
+
+For more additional informations see:\\~\\
+\href{https://en.wikipedia.org/wiki/Standard_Commands_for_Programmable_Instruments}{Standard Commands for Programmable Instruments}\\
+\href{https://rfmw.em.keysight.com/spdhelpfiles/33500/webhelp/us/content/__I_SCPI/00%20scpi_introduction.htm}{Introduction to the SCPI Language}\\
+\href{https://www.jaybee.cz/scpi-parser/}{SCPI parser library v2}\\
+
+\subsection*{\textcolor{darkblue}{\textbf{SCPI Syntax}}}
+The command syntax format is illustrated below:
+\begin{itemize}
+    \item \textbf{Command Header}: Every SCPI command begins with a command header, which typically consists of one or more letters followed by a colon (:).
+     This header identifies the function or operation that the command instructs the instrument to perform. For example, \textbf{SYSTem:CONFigure:VOLTage}
+      instructs the instrument to configure the voltage measurement settings.
+      \item \textbf{Subsystems and Parameters}: SCPI commands often include hierarchical subsystems and parameters. These subsystems represent different functional 
+      blocks or modules within the instrument, and parameters specify specific settings or values associated with those subsystems. For instance, in the command
+      \textbf{SENS:VOLT:DC:RANG 10}, \textbf{SENS} represents the sensor subsystem, \textbf{VOLT} denotes voltage measurement, \textbf{DC} specifies the measurement
+      type (direct current), and \textbf{RANG 10} sets the measurement range to 10 volts.
+    \item \textbf{Query Commands}: SCPI supports query commands, which are used to retrieve instrument status or measurement data. Query commands typically end with
+     a question mark (?). For example, \textbf{MEASure:VOLTage?} queries the instrument for the current voltage measurement.
+\end{itemize}
+
+\subsection*{\textcolor{darkblue}{SCPI Command Termination}}
+
+\part*{\textcolor{darkblue}{Commands by Subsystem}}
+\subsubsection*{SYSTem:COMMunicate}
+\subsubsection*{LEPton:SYSTem}
+\subsubsection*{LEPton:OEM}
+\subsubsection*{LEPton:VIDeo}
+
+
+\end{document}

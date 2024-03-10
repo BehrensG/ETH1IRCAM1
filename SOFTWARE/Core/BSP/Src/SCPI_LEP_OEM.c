@@ -26,6 +26,14 @@ extern scpi_choice_def_t scpi_boolean_select[];
  *
  * OEM FLIR Systems Part Number
  *
+ * @info
+ *
+ * This function returns FLIR Systems’ Camera Part Number. The Camera Part Number is a 32-byte string identifier unique
+ * to a specific configuration of the Camera module.
+ *
+ * @return
+ *
+ * string value
  * --------------------------------------------------------------------------------------------------------------------
  */
 
@@ -39,6 +47,13 @@ scpi_result_t SCPI_LeptonOemPartNumberQ(scpi_t *context)
 /* --------------------------------------------------------------------------------------------------------------------
  *
  * OEM Camera Software Revision
+ *
+ * @info
+ *
+ * This function returns the Camera’s software revision for both software processors in the Camera.
+ * The Camera’s Software revision is composed of 3 fields: a major version, minor version, and a build number for
+ * each processor. Each of the 3 fields is 8-bits.
+ *
  *
  * --------------------------------------------------------------------------------------------------------------------
  */

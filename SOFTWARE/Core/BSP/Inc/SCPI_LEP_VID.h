@@ -27,7 +27,10 @@ scpi_result_t SCPI_LeptonVideoFocusMetricQ(scpi_t * context);
 scpi_result_t SCPI_LeptonVideoFreezeEnableStateQ(scpi_t * context);
 scpi_result_t SCPI_LeptonVideoFreezeEnableState(scpi_t * context);
 
-scpi_result_t SCPI_LeptonOemVideoOutputFormatQ(scpi_t * context);
-scpi_result_t SCPI_LeptonOemVideoOutputFormat(scpi_t * context);
+scpi_result_t SCPI_LeptonVideoOutputFormatQ(scpi_t * context);
+scpi_result_t SCPI_LeptonVideoOutputFormat(scpi_t * context);
+
+scpi_result_t SCPI_LeptonVideoTimeoutQ(scpi_t * context);
+scpi_result_t SCPI_LeptonVideoTimeout(scpi_t * context);
 
 #endif /* BSP_INC_SCPI_LEP_VID_H_ */

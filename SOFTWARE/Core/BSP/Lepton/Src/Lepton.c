@@ -136,9 +136,10 @@ static void LEP_GetFrame(bool *valid_frame, uint32_t timeout)
 	}
 }
 
+cci_result_t lep_init_status = CCI_NOT_READY;
+
 static void StartLeptonMainTask(void *argument)
 {
-	cci_result_t lep_init_status = CCI_OK;
 	bool valid_frame = false;
 
 	LEP_InitData();
@@ -148,7 +149,7 @@ static void StartLeptonMainTask(void *argument)
 	if (CCI_OK ==lep_init_status)
 		LEP_CreateUDPTask();
 
-	LED_Control(GREEN | BLUE | RED, 0);
+	LED_Control(BLUE, 0);
 
 	for (;;)
 	{
@@ -172,7 +173,7 @@ static void StartLeptonMainTask(void *argument)
 		}
 		else
 		{
-			LED_Toggle(RED, 5, 1000);
+			osDelay(pdMS_TO_TICKS(1));
 		}
 
 	}

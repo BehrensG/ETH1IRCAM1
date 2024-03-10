@@ -138,10 +138,8 @@ static uint8_t SCPI_StringToMACArray(const char *MAC_string, uint8_t *MAC_array)
 
 scpi_result_t SCPI_SystemCommunicateLanIpAddress(scpi_t *context)
 {
-	char str[16] =
-	{ 0 };
-	uint8_t numb[4] =
-	{ 0 };
+	char str[16] ={ 0 };
+	uint8_t numb[4] = { 0 };
 	size_t len = 0;
 	uint8_t conv_result = 0;
 
@@ -154,23 +152,23 @@ scpi_result_t SCPI_SystemCommunicateLanIpAddress(scpi_t *context)
 
 	switch (conv_result)
 	{
-	case NET_STR_OK:
-	{
-		bsp.ip4_current.ip[0] = numb[0];
-		bsp.ip4_current.ip[1] = numb[1];
-		bsp.ip4_current.ip[2] = numb[2];
-		bsp.ip4_current.ip[3] = numb[3];
-	}
-		break;
-	case NET_STR_WRONG_FORMAT:
-		SCPI_ErrorPush(context, SCPI_ERROR_DATA_TYPE_ERROR);
-		break;
-	case NET_STR_WRONG_NUMBER:
-		SCPI_ErrorPush(context, SCPI_ERROR_NUMERIC_DATA_NOT_ALLOWED);
-		break;
-	default:
-		return SCPI_RES_ERR;
-		break;
+		case NET_STR_OK:
+		{
+			bsp.ip4_current.ip[0] = numb[0];
+			bsp.ip4_current.ip[1] = numb[1];
+			bsp.ip4_current.ip[2] = numb[2];
+			bsp.ip4_current.ip[3] = numb[3];
+		}
+			break;
+		case NET_STR_WRONG_FORMAT:
+			SCPI_ErrorPush(context, SCPI_ERROR_DATA_TYPE_ERROR);
+			break;
+		case NET_STR_WRONG_NUMBER:
+			SCPI_ErrorPush(context, SCPI_ERROR_NUMERIC_DATA_NOT_ALLOWED);
+			break;
+		default:
+			return SCPI_RES_ERR;
+			break;
 	}
 
 	return SCPI_RES_OK;
