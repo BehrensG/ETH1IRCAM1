@@ -1204,10 +1204,10 @@
       (net 140 "unconnected-(U501-MIPI_DATA_N-Pad31)") (pinfunction "MIPI_DATA_N") (pintype "output+no_connect") (tstamp 3a32602c-4d02-4f28-8093-fd261e2351af))
     (pad "32" smd rect (at -3.15 -4.31 90) (size 0.5 0.84) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 141 "unconnected-(U501-MIPI_DATA_P-Pad32)") (pinfunction "MIPI_DATA_P") (pintype "output+no_connect") (tstamp 493434b6-fa63-4c69-8bb0-f29281024fc4))
-    (model "${KIPRJMOD}/lib/3D/1050281001.stp"
-      (offset (xyz 0 0 2))
+    (model "${KIPRJMOD}/lib/3D/Lepton 3.5, Socket 10502821001, 57 Deg HFOV 9 Hz Export.STEP"
+      (offset (xyz 0 0 2.5))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 90))
+      (rotate (xyz 0 0 0))
     )
   )
 
@@ -1597,6 +1597,7 @@
     (fp_line (start 2 2) (end -2 2)
       (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp aa233d6c-4ec8-4ef3-a24c-3a9338f630d0))
     (pad "" smd custom (at -0.5 -0.5 270) (size 0.778626 0.778626) (layers "F.Paste")
+      (thermal_bridge_angle 45)
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1613,6 +1614,7 @@
           (width 0.296797) (fill yes))
       ) (tstamp b1c9025f-3de9-441e-a615-74a1857dec09))
     (pad "" smd custom (at -0.5 0.5 270) (size 0.778626 0.778626) (layers "F.Paste")
+      (thermal_bridge_angle 45)
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1629,6 +1631,7 @@
           (width 0.296797) (fill yes))
       ) (tstamp d327b374-c941-4ada-8900-0822b6a250db))
     (pad "" smd custom (at 0.5 -0.5 270) (size 0.778626 0.778626) (layers "F.Paste")
+      (thermal_bridge_angle 45)
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -1645,6 +1648,7 @@
           (width 0.296797) (fill yes))
       ) (tstamp 6c5222b5-8789-4d5c-8467-93058f90fe4f))
     (pad "" smd custom (at 0.5 0.5 270) (size 0.778626 0.778626) (layers "F.Paste")
+      (thermal_bridge_angle 45)
       (options (clearance outline) (anchor circle))
       (primitives
         (gr_poly
@@ -6866,7 +6870,7 @@
   (dimension (type aligned) (layer "User.1") (tstamp 0bb6b524-b590-4d5f-8c7b-006aeb6c7132)
     (pts (xy 189.5 77.5) (xy 189.5 122.5))
     (height -6)
-    (gr_text "45.0000 mm" (at 194.35 100 90) (layer "User.1") (tstamp 0bb6b524-b590-4d5f-8c7b-006aeb6c7132)
+    (gr_text "45,0000 mm" (at 194.35 100 90) (layer "User.1") (tstamp 0bb6b524-b590-4d5f-8c7b-006aeb6c7132)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
@@ -6875,7 +6879,7 @@
   (dimension (type aligned) (layer "User.1") (tstamp b3f9d1d9-ff87-4744-8554-90582082d2a5)
     (pts (xy 114.5 122.5) (xy 189.5 122.5))
     (height 5.5)
-    (gr_text "75.0000 mm" (at 152 126.85) (layer "User.1") (tstamp b3f9d1d9-ff87-4744-8554-90582082d2a5)
+    (gr_text "75,0000 mm" (at 152 126.85) (layer "User.1") (tstamp b3f9d1d9-ff87-4744-8554-90582082d2a5)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
