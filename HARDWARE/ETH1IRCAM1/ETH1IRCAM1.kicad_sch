@@ -106,6 +106,30 @@
     (uuid e3ea8662-7761-46c8-ad9b-263c709fc6bd)
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 95.885 190.5 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 028790a5-8c62-41ea-9abf-8929a87b61e2)
+    (property "Reference" "H107" (at 98.425 189.23 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "M3" (at 98.425 191.77 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 95.885 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 95.885 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "ETH1IRCAM1"
+        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+          (reference "H107") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Mechanical:MountingHole") (at 19.05 190.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2474638a-8691-4fc3-bc44-bb7c80a2e4b5)
@@ -154,6 +178,30 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 70.485 190.5 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 930de92c-8dec-40ae-88e6-4901bcf0af1a)
+    (property "Reference" "H105" (at 73.025 189.23 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "M3" (at 73.025 191.77 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 70.485 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 70.485 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "ETH1IRCAM1"
+        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+          (reference "H105") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Mechanical:MountingHole") (at 31.75 190.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cd30d5f1-648f-4917-8e84-eae681fdc5c6)
@@ -178,6 +226,30 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 108.585 190.5 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d3effe85-0426-43d5-b67e-df75e4e1c3fb)
+    (property "Reference" "H108" (at 111.125 189.23 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "M3" (at 111.125 191.77 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 108.585 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 108.585 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "ETH1IRCAM1"
+        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+          (reference "H108") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Mechanical:MountingHole") (at 44.45 190.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid eec79ea9-a87d-453d-8ac3-1c50676253c1)
@@ -197,6 +269,30 @@
       (project "ETH1IRCAM1"
         (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
           (reference "H103") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 83.185 190.5 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid effc7f85-c94b-4eec-9095-c153d9268660)
+    (property "Reference" "H106" (at 85.725 189.23 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "M3" (at 85.725 191.77 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 83.185 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 83.185 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "ETH1IRCAM1"
+        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+          (reference "H106") (unit 1)
         )
       )
     )
