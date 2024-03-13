@@ -6,6 +6,8 @@
 \usepackage{xcolor}
 \usepackage{geometry}
 \usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{setspace}
 
 \definecolor{darkblue}{RGB}{0,0,100}
 
@@ -55,10 +57,14 @@ The command syntax format is illustrated below:
 \subsection*{\textcolor{darkblue}{SCPI Command Termination}}
 
 \part*{\textcolor{darkblue}{Commands by Subsystem}}
-\subsubsection*{SYSTem:COMMunicate}
-\subsubsection*{LEPton:SYSTem}
+\begin{spacing}{2}
+    \hyperref[sec:SystemCommunicate]{\textbf{\large\textcolor{darkblue}{SYSTem:COMMunicate}}}\\
+    \hyperref[sec:LeptonSystem]{\textbf{\large\textcolor{darkblue}{LEPton:SYSTem}}}
+\end{spacing}
 \subsubsection*{LEPton:OEM}
 \subsubsection*{LEPton:VIDeo}
 
+\section*{\label{sec:SystemCommunicate}System Communication Subsystem}
+\section*{\label{sec:LeptonSystem}Lepton System Subsystem}
 
 \end{document}

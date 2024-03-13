@@ -164,16 +164,17 @@ static void StartLeptonMainTask(void *argument)
 				if (valid_frame)
 					osMutexRelease(LeptonMutexHandle);
 
-				osDelay(pdMS_TO_TICKS(1));
+				osDelay(pdMS_TO_TICKS(10));
+
 			}
 			else
 			{
-				osDelay(pdMS_TO_TICKS(1));
+				osDelay(pdMS_TO_TICKS(10));
 			}
 		}
 		else
 		{
-			osDelay(pdMS_TO_TICKS(1));
+			osDelay(pdMS_TO_TICKS(10));
 		}
 
 	}
@@ -429,6 +430,6 @@ static void StartLeptonUDPTask(void *argument)
 			case UDP_STATE_ACK: state = UDP_Ack(); break;
 			default: state = UDP_STATE_STREAM; break;
 		}
-		//osDelay(pdMS_TO_TICKS(1));
+		osDelay(pdMS_TO_TICKS(10));
 	}
 }

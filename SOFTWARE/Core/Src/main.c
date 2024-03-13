@@ -606,7 +606,14 @@ void StartDefaultTask(void *argument)
 	  }
 	  else if (CCI_OK == lep_init_status)
 	  {
-		  LED_Toggle(GREEN, 5, 2000);
+		  if (bsp.default_cfg)
+		  {
+			  LED_Toggle(BLUE, 5, 2000);
+		  }
+		  else
+		  {
+			  LED_Toggle(GREEN, 5, 2000);
+		  }
 	  }
 	  else
 	  {
