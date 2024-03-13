@@ -302,6 +302,7 @@ static udp_task_state_t UDP_Send(uint32_t rtp_ssrc)
 		for (uint8_t x = 0; x < VOSPI_SEGMENTS_PER_FRAME; x++)
 		{
 			err = RTP_SendPacket(conn, x, rtp_sequence_number, rtp_ssrc, (x+1));
+			osDelay(pdMS_TO_TICKS(1));
 
 			if (ERR_OK != err)
 				break;
@@ -430,6 +431,6 @@ static void StartLeptonUDPTask(void *argument)
 			case UDP_STATE_ACK: state = UDP_Ack(); break;
 			default: state = UDP_STATE_STREAM; break;
 		}
-		osDelay(pdMS_TO_TICKS(10));
+		osDelay(pdMS_TO_TICKS(5));
 	}
 }

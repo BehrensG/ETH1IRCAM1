@@ -3,11 +3,14 @@
 \usepackage[english]{babel}
 \usepackage[english]{isodate}
 \usepackage[parfill]{parskip}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{lipsum}
 \usepackage{setspace}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{enumitem}
 
 \definecolor{darkblue}{RGB}{0,0,100}
 
@@ -59,12 +62,176 @@ The command syntax format is illustrated below:
 \part*{\textcolor{darkblue}{Commands by Subsystem}}
 \begin{spacing}{2}
     \hyperref[sec:SystemCommunicate]{\textbf{\large\textcolor{darkblue}{SYSTem:COMMunicate}}}\\
-    \hyperref[sec:LeptonSystem]{\textbf{\large\textcolor{darkblue}{LEPton:SYSTem}}}
+    \hyperref[sec:LeptonSystem]{\textbf{\large\textcolor{darkblue}{LEPton:SYSTem}}}\\
+    \hyperref[sec:LeptonOem]{\textbf{\large\textcolor{darkblue}{LEPton:OEM}}}\\
+    \hyperref[sec:LeptonVideo]{\textbf{\large\textcolor{darkblue}{LEPton:VIDeo}}}\\
 \end{spacing}
-\subsubsection*{LEPton:OEM}
-\subsubsection*{LEPton:VIDeo}
 
 \section*{\label{sec:SystemCommunicate}System Communication Subsystem}
+
 \section*{\label{sec:LeptonSystem}Lepton System Subsystem}
+
+%-------------------------------------------------------------------------------------------------------------------
+
+\subsection*{\textcolor{darkblue}{LEPton:SYSTem:STATus?}}
+
+\vspace{12pt}
+
+This command returns the system status.
+
+    \begin{table}[h]
+        \centering
+        \begin{tabularx}{\textwidth}{|X|X|}
+            \hline
+            \rowcolor{gray!30} 
+            Parameters & Result \\
+            \hline
+            NONE &  0, 1, 2, 3, 4\\
+            \hline
+            \multicolumn{2}{|X|}{
+                \begin{itemize}[label={}, leftmargin=*]
+                    \item 0 - Ready
+                    \item 1 - Initializing
+                    \item 2 - Low power model
+                    \item 3 - going into stanby
+                    \item 4 - flat field calibration (FFC) in process
+                \end{itemize}
+            } \\
+            \hline
+        \end{tabularx}
+    \end{table}
+
+%-------------------------------------------------------------------------------------------------------------------
+
+\subsection*{\textcolor{darkblue}{LEPton:SYSTem:UPTIMe?}}
+
+\vspace{12pt}
+
+This command returns the current uptime in milliseconds. The uptime is the time since the
+camera was brought out of Standby. The uptime counter is implemented as a 32-bit counter
+and as such will rollover after the maximum count of 0xFFFFFFFF (1193 hours) is reached and restart at 0x00000000.
+
+    \begin{table}[h]
+        \centering
+        \begin{tabularx}{\textwidth}{|X|X|}
+            \hline
+            \rowcolor{gray!30} 
+            Parameters & Result \\
+            \hline
+            NONE &  Up time in miliseconds as uint32 value. The value is be displayed as decimal.\\
+            \hline
+        \end{tabularx}
+    \end{table}
+
+%-------------------------------------------------------------------------------------------------------------------
+
+\subsection*{\textcolor{darkblue}{LEPton:SYSTem:AUX:TEMPerature?}}
+
+\vspace{12pt}
+
+This command returns the Lepton Camera’s AUX Temperature.
+
+    \begin{table}[h]
+        \centering
+        \begin{tabularx}{\textwidth}{|X|X|}
+            \hline
+            \rowcolor{gray!30} 
+            Parameters & Result \\
+            \hline
+            NONE &  AUX temperature as float value.\\
+            \hline
+        \end{tabularx}
+    \end{table}
+
+    \begin{itemize}
+        \item The default temperature value is in kelvin. It is possible to select a different scale using \\ 
+                \textcolor{darkblue}{SYSTem:TEMPerature:UNIT} command.
+    \end{itemize}
+
+%-------------------------------------------------------------------------------------------------------------------
+\newpage
+
+\subsection*{\textcolor{darkblue}{LEPton:SYSTem:FPA:TEMPerature?}}
+
+\vspace{12pt}
+
+This command returns the Lepton Camera’s FPA Temperature.
+
+    \begin{table}[h]
+        \centering
+        \begin{tabularx}{\textwidth}{|X|X|}
+            \hline
+            \rowcolor{gray!30} 
+            Parameters & Result \\
+            \hline
+            NONE &  FPA temperature as float value.\\
+            \hline
+        \end{tabularx}
+    \end{table}
+
+    \begin{itemize}
+        \item The default temperature value is in kelvin. It is possible to select a different scale using \\ 
+                \textcolor{darkblue}{SYSTem:TEMPerature:UNIT} command.
+    \end{itemize}
+
+%-------------------------------------------------------------------------------------------------------------------
+
+\subsection*{\textcolor{darkblue}{LEPton:SYSTem:FRAMe:AVERage:RUN}}
+
+\vspace{12pt}
+
+This command executes the average frames command. Executing this command causes the camera to sum
+together a number of frames, divide the summed frame by the number of frames summed and generate a result
+frame containing the average of the summed frames. For Lepton 3.0 and 3.5, the number of frames is fixed at 8.
+
+    \begin{table}[h]
+        \centering
+        \begin{tabularx}{\textwidth}{|X|X|}
+            \hline
+            \rowcolor{gray!30} 
+            Parameters & Result \\
+            \hline
+            NONE &  NONE \\
+            \hline
+        \end{tabularx}
+    \end{table}
+
+%-------------------------------------------------------------------------------------------------------------------
+
+\subsection*{\textcolor{darkblue}{LEPton:SYSTem:SN?}}
+
+\vspace{12pt}
+
+This command returns the Lepton Camera’s Customer serial number as a 32-byte character string. The Customer
+Serial Number is a (32 byte string) identifier unique to a specific configuration of module.
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{|X|X|}
+        \hline
+        \rowcolor{gray!30} 
+        Parameters & Result \\
+        \hline
+        NONE &  String \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+%-------------------------------------------------------------------------------------------------------------------
+
+\subsection*{\textcolor{darkblue}{LEPton:SYSTem:SCENe:STATistics?}}
+
+\vspace{12pt}
+
+This command returns the current scene statistics for the video frame defined by the SYS ROI \\
+(\textcolor{darkblue}{LEPton:SYSTem:SCENe:ROI}).
+The statistics captured are scene mean intensity in counts, minimum and maximum intensity in counts, and the
+number of pixels in the ROI. Lepton scene intensities range from 0 to 16383. The range drops to 0 to 255 when in
+8-bit AGC mode. When TLinear mode is enabled (available in the Radiometric releases),
+the camera output represents temperature values, and the scene statistics are reported in Kelvin x 100.
+
+\newpage
+\section*{\label{sec:LeptonOem}Lepton OEM Subsystem}
+\section*{\label{sec:LeptonVideo}Lepton Video Subsystem}
 
 \end{document}
