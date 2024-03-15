@@ -1,508 +1,1270 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd)
-
-  (paper "A4")
-
-  (lib_symbols
-    (symbol "Mechanical:MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-      (property "Reference" "H" (at 0 5.08 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "MountingHole" (at 0 3.175 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "mounting hole" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Mounting Hole without connection" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "MountingHole*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "MountingHole_0_1"
-        (circle (center 0 0) (radius 1.27)
-          (stroke (width 1.27) (type default))
-          (fill (type none))
-        )
-      )
-    )
-  )
-
-
-  (wire (pts (xy 146.05 52.705) (xy 151.13 52.705))
-    (stroke (width 0) (type default))
-    (uuid 1d2393f6-152b-40bd-90dd-ce70dda2ff2c)
-  )
-  (wire (pts (xy 146.05 83.82) (xy 151.13 83.82))
-    (stroke (width 0) (type default))
-    (uuid 1da288f5-4673-4379-b1a0-30991c74b9c8)
-  )
-  (wire (pts (xy 146.05 50.8) (xy 151.13 50.8))
-    (stroke (width 0) (type default))
-    (uuid 2523ca23-2378-48f3-8ea3-4afa1517733f)
-  )
-  (wire (pts (xy 146.05 59.69) (xy 151.13 59.69))
-    (stroke (width 0) (type default))
-    (uuid 2fbfc5f1-5a82-4643-aa53-73656de1f4b1)
-  )
-  (wire (pts (xy 146.05 93.98) (xy 151.13 93.98))
-    (stroke (width 0) (type default))
-    (uuid 51219be4-4404-468a-9cb5-90cabf87d603)
-  )
-  (wire (pts (xy 146.05 64.77) (xy 151.13 64.77))
-    (stroke (width 0) (type default))
-    (uuid 573cf287-026b-4177-b4b9-fd89cf4847f3)
-  )
-  (wire (pts (xy 146.05 80.01) (xy 151.13 80.01))
-    (stroke (width 0) (type default))
-    (uuid 5ddc9f17-a09d-48f8-99b7-2b35a0a8dfc8)
-  )
-  (wire (pts (xy 146.05 54.61) (xy 151.13 54.61))
-    (stroke (width 0) (type default))
-    (uuid 63a77abe-e5e6-4983-8926-d76b6995e7ef)
-  )
-  (wire (pts (xy 146.05 85.725) (xy 151.13 85.725))
-    (stroke (width 0) (type default))
-    (uuid 74f59a20-aa5b-4405-a108-51a6db2b92dd)
-  )
-  (wire (pts (xy 146.05 78.105) (xy 151.13 78.105))
-    (stroke (width 0) (type default))
-    (uuid 9c8cad76-9ef5-4213-8c64-a519d800303d)
-  )
-  (wire (pts (xy 146.05 90.805) (xy 151.13 90.805))
-    (stroke (width 0) (type default))
-    (uuid a38c054e-ac22-4765-8adc-d2dc36cf402d)
-  )
-  (wire (pts (xy 146.05 88.9) (xy 151.13 88.9))
-    (stroke (width 0) (type default))
-    (uuid ab1e9e72-c181-48d9-9ec1-e083f4e5c925)
-  )
-  (wire (pts (xy 146.05 57.785) (xy 151.13 57.785))
-    (stroke (width 0) (type default))
-    (uuid d848e4da-e907-48ec-b3cd-4796c1a1f274)
-  )
-  (wire (pts (xy 146.05 95.885) (xy 151.13 95.885))
-    (stroke (width 0) (type default))
-    (uuid d91c2ed6-bf51-444f-9908-c20ba611f7e2)
-  )
-  (wire (pts (xy 146.05 81.915) (xy 151.13 81.915))
-    (stroke (width 0) (type default))
-    (uuid da940344-8d2d-497e-b63a-6b31db62d67f)
-  )
-  (wire (pts (xy 146.05 99.06) (xy 151.13 99.06))
-    (stroke (width 0) (type default))
-    (uuid dc6324f5-f3f0-48c7-bea2-fa9351163c60)
-  )
-  (wire (pts (xy 146.05 62.865) (xy 151.13 62.865))
-    (stroke (width 0) (type default))
-    (uuid e3ea8662-7761-46c8-ad9b-263c709fc6bd)
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 95.885 190.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 028790a5-8c62-41ea-9abf-8929a87b61e2)
-    (property "Reference" "H107" (at 98.425 189.23 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "M3" (at 98.425 191.77 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 95.885 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 95.885 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
-          (reference "H107") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 19.05 190.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 2474638a-8691-4fc3-bc44-bb7c80a2e4b5)
-    (property "Reference" "H101" (at 21.59 189.23 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "M3" (at 21.59 191.77 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 19.05 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 19.05 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
-          (reference "H101") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 57.15 190.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 37425a23-a4c5-465a-b393-5712a0dfa6fa)
-    (property "Reference" "H104" (at 59.69 189.23 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "M3" (at 59.69 191.77 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 57.15 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 57.15 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
-          (reference "H104") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 70.485 190.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 930de92c-8dec-40ae-88e6-4901bcf0af1a)
-    (property "Reference" "H105" (at 73.025 189.23 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "M3" (at 73.025 191.77 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 70.485 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 70.485 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
-          (reference "H105") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 31.75 190.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid cd30d5f1-648f-4917-8e84-eae681fdc5c6)
-    (property "Reference" "H102" (at 34.29 189.23 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "M3" (at 34.29 191.77 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 31.75 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 31.75 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
-          (reference "H102") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 108.585 190.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d3effe85-0426-43d5-b67e-df75e4e1c3fb)
-    (property "Reference" "H108" (at 111.125 189.23 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "M3" (at 111.125 191.77 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 108.585 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 108.585 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
-          (reference "H108") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 44.45 190.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid eec79ea9-a87d-453d-8ac3-1c50676253c1)
-    (property "Reference" "H103" (at 46.99 189.23 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "M3" (at 46.99 191.77 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 44.45 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 44.45 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
-          (reference "H103") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 83.185 190.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid effc7f85-c94b-4eec-9095-c153d9268660)
-    (property "Reference" "H106" (at 85.725 189.23 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "M3" (at 85.725 191.77 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom" (at 83.185 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 83.185 190.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
-          (reference "H106") (unit 1)
-        )
-      )
-    )
-  )
-
-  (sheet (at 109.855 45.72) (size 36.195 56.515) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 02ab86d0-6a73-43f0-a2e2-fa1962166526)
-    (property "Sheetname" "MCU" (at 109.855 45.0084 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "MCU.kicad_sch" (at 109.855 102.8196 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (pin "NRST" bidirectional (at 146.05 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid f86ccd19-440a-4d3a-9d4e-3b70778d698a)
-    )
-    (pin "SPI_~{SS}" output (at 146.05 50.8 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid f87bd7f2-0126-4112-b07b-dd454c241eda)
-    )
-    (pin "SPI_MISO" input (at 146.05 54.61 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 8f5f1429-8385-466c-8740-0863acc37ce2)
-    )
-    (pin "SPI_CLK" output (at 146.05 52.705 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 1173a6f3-6998-4443-8494-72c3d4ed6a23)
-    )
-    (pin "RMII_MDC" bidirectional (at 146.05 83.82 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid b0ece4a8-d166-4b0d-a946-ba281a961b44)
-    )
-    (pin "RMII_RXD1" bidirectional (at 146.05 95.885 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid ebcca4cb-e80b-4421-be1a-152cc97edbe9)
-    )
-    (pin "RMII_RXD0" bidirectional (at 146.05 93.98 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid a1ae9aa6-3561-4888-bfc6-04827c4a4ea0)
-    )
-    (pin "RMII_TXEN" bidirectional (at 146.05 85.725 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid e0af6b07-14ea-456a-b993-4489d14cf3e8)
-    )
-    (pin "RMII_TXD0" bidirectional (at 146.05 88.9 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 00e0b3d3-1d58-455c-bf69-e75e8f55f829)
-    )
-    (pin "RMII_TXD1" bidirectional (at 146.05 90.805 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 3c3589f2-e6e4-4d67-bf7a-bc946484a880)
-    )
-    (pin "RMII_MDIO" bidirectional (at 146.05 78.105 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid c93b3ca8-0c27-43fc-826d-304c7d33bf16)
-    )
-    (pin "REF_CLK" bidirectional (at 146.05 81.915 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 18deba75-dff1-4050-bdce-e633b15f8402)
-    )
-    (pin "RMII_CRS_DV" bidirectional (at 146.05 80.01 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 20e3ebf0-04c6-467c-aac0-48ac89704683)
-    )
-    (pin "LEP_VSYNC" input (at 146.05 57.785 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 514aa5aa-66c4-43c3-9d70-778cb66d0f94)
-    )
-    (pin "LEP_~{RST}" output (at 146.05 59.69 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid aa5a0fcc-5849-4749-9d3b-af322593a108)
-    )
-    (pin "I2C4_SCL" bidirectional (at 146.05 64.77 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 73809186-a9e7-401b-8f4f-de599f1fcaba)
-    )
-    (pin "I2C4_SDA" bidirectional (at 146.05 62.865 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 41c031d1-9ec3-4970-83ba-a491dd997fd6)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd" (page "5"))
-      )
-    )
-  )
-
-  (sheet (at 109.855 108.585) (size 67.31 22.225) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 4d9d56a2-71e1-4d23-be79-82b284e5fab1)
-    (property "Sheetname" "Power" (at 109.855 107.8734 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "Power.kicad_sch" (at 109.855 131.3946 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd" (page "2"))
-      )
-    )
-  )
-
-  (sheet (at 151.13 74.93) (size 26.035 27.305) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 5a701738-cd49-49a3-a155-1a9f780a319a)
-    (property "Sheetname" "Ethernet" (at 151.13 74.2184 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "Ethernet.kicad_sch" (at 151.13 102.8196 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (pin "RMII_MDIO" bidirectional (at 151.13 78.105 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid ebc6f962-f3d7-43d7-a0ac-ec1a793d9211)
-    )
-    (pin "RMII_CRS_DV" bidirectional (at 151.13 80.01 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid f0069632-0a9d-4682-8af2-384ed764ed75)
-    )
-    (pin "REF_CLK" bidirectional (at 151.13 81.915 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 69f33059-4002-4b52-b913-b2da4fee8744)
-    )
-    (pin "RMII_MDC" bidirectional (at 151.13 83.82 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 3196a146-f6ba-4f24-87e5-6bfd98748890)
-    )
-    (pin "NRST" bidirectional (at 151.13 99.06 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid d4c8ce3d-b286-4f1c-8897-ee0a40ba9fdb)
-    )
-    (pin "RMII_TXD1" bidirectional (at 151.13 90.805 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 6b196bd9-45b9-45c4-bb44-817741b111f6)
-    )
-    (pin "RMII_RXD0" bidirectional (at 151.13 93.98 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid f243f79d-6647-4465-bf43-a55d19d35ae9)
-    )
-    (pin "RMII_TXEN" bidirectional (at 151.13 85.725 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 90ef2004-cfd8-45bf-8917-d5c9ce491d58)
-    )
-    (pin "RMII_TXD0" bidirectional (at 151.13 88.9 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid bda54888-4191-4ea0-9b1e-9a13aa8251e8)
-    )
-    (pin "RMII_RXD1" bidirectional (at 151.13 95.885 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 3864134d-9e31-4ba4-8536-74aa60eb9be9)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd" (page "4"))
-      )
-    )
-  )
-
-  (sheet (at 151.13 45.72) (size 26.035 22.225) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 9bf6a537-6182-4846-99ae-dbab532f6139)
-    (property "Sheetname" "Lepton" (at 151.13 45.0084 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "Lepton.kicad_sch" (at 151.13 68.5296 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (pin "SPI_~{SS}" input (at 151.13 50.8 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid b3b3c326-689c-46c1-804d-f85afc7805d0)
-    )
-    (pin "SPI_MISO" output (at 151.13 54.61 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 7874dbdc-0186-4fc7-b882-84e6dd28a2d1)
-    )
-    (pin "LEP_VSYNC" output (at 151.13 57.785 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 72a64b66-1467-44d7-afb3-b7653736e180)
-    )
-    (pin "SPI_CLK" input (at 151.13 52.705 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 281e32b5-f88c-4d08-a191-b163c10d1fff)
-    )
-    (pin "LEP_~{RST}" input (at 151.13 59.69 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid f14b4dc4-f072-449b-b25a-7ce032f7b4b6)
-    )
-    (pin "I2C4_SDA" bidirectional (at 151.13 62.865 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 5b754bbb-9459-4450-bc73-fd9e8534cb76)
-    )
-    (pin "I2C4_SCL" bidirectional (at 151.13 64.77 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid b0d2bb79-245a-4b1b-875f-ba0f4376bfe0)
-    )
-    (instances
-      (project "ETH1IRCAM1"
-        (path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd" (page "6"))
-      )
-    )
-  )
-
-  (sheet_instances
-    (path "/" (page "1"))
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 146.05 52.705) (xy 151.13 52.705)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d2393f6-152b-40bd-90dd-ce70dda2ff2c")
+	)
+	(wire
+		(pts
+			(xy 146.05 83.82) (xy 151.13 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1da288f5-4673-4379-b1a0-30991c74b9c8")
+	)
+	(wire
+		(pts
+			(xy 146.05 50.8) (xy 151.13 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2523ca23-2378-48f3-8ea3-4afa1517733f")
+	)
+	(wire
+		(pts
+			(xy 146.05 59.69) (xy 151.13 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fbfc5f1-5a82-4643-aa53-73656de1f4b1")
+	)
+	(wire
+		(pts
+			(xy 146.05 93.98) (xy 151.13 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51219be4-4404-468a-9cb5-90cabf87d603")
+	)
+	(wire
+		(pts
+			(xy 146.05 64.77) (xy 151.13 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "573cf287-026b-4177-b4b9-fd89cf4847f3")
+	)
+	(wire
+		(pts
+			(xy 146.05 80.01) (xy 151.13 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ddc9f17-a09d-48f8-99b7-2b35a0a8dfc8")
+	)
+	(wire
+		(pts
+			(xy 146.05 54.61) (xy 151.13 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63a77abe-e5e6-4983-8926-d76b6995e7ef")
+	)
+	(wire
+		(pts
+			(xy 146.05 85.725) (xy 151.13 85.725)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74f59a20-aa5b-4405-a108-51a6db2b92dd")
+	)
+	(wire
+		(pts
+			(xy 146.05 78.105) (xy 151.13 78.105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c8cad76-9ef5-4213-8c64-a519d800303d")
+	)
+	(wire
+		(pts
+			(xy 146.05 90.805) (xy 151.13 90.805)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a38c054e-ac22-4765-8adc-d2dc36cf402d")
+	)
+	(wire
+		(pts
+			(xy 146.05 88.9) (xy 151.13 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab1e9e72-c181-48d9-9ec1-e083f4e5c925")
+	)
+	(wire
+		(pts
+			(xy 146.05 57.785) (xy 151.13 57.785)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d848e4da-e907-48ec-b3cd-4796c1a1f274")
+	)
+	(wire
+		(pts
+			(xy 146.05 95.885) (xy 151.13 95.885)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d91c2ed6-bf51-444f-9908-c20ba611f7e2")
+	)
+	(wire
+		(pts
+			(xy 146.05 81.915) (xy 151.13 81.915)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da940344-8d2d-497e-b63a-6b31db62d67f")
+	)
+	(wire
+		(pts
+			(xy 146.05 99.06) (xy 151.13 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc6324f5-f3f0-48c7-bea2-fa9351163c60")
+	)
+	(wire
+		(pts
+			(xy 146.05 62.865) (xy 151.13 62.865)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3ea8662-7761-46c8-ad9b-263c709fc6bd")
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 95.885 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "028790a5-8c62-41ea-9abf-8929a87b61e2")
+		(property "Reference" "H107"
+			(at 98.425 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 98.425 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 95.885 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.885 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 95.885 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(reference "H107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 19.05 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2474638a-8691-4fc3-bc44-bb7c80a2e4b5")
+		(property "Reference" "H101"
+			(at 21.59 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 21.59 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 19.05 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 19.05 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 19.05 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(reference "H101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 57.15 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "37425a23-a4c5-465a-b393-5712a0dfa6fa")
+		(property "Reference" "H104"
+			(at 59.69 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 59.69 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 57.15 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 57.15 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 57.15 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(reference "H104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 70.485 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "930de92c-8dec-40ae-88e6-4901bcf0af1a")
+		(property "Reference" "H105"
+			(at 73.025 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 73.025 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 70.485 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 70.485 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 70.485 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(reference "H105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 31.75 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cd30d5f1-648f-4917-8e84-eae681fdc5c6")
+		(property "Reference" "H102"
+			(at 34.29 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 34.29 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 31.75 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 31.75 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 31.75 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(reference "H102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 108.585 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d3effe85-0426-43d5-b67e-df75e4e1c3fb")
+		(property "Reference" "H108"
+			(at 111.125 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 111.125 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 108.585 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 108.585 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 108.585 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(reference "H108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 44.45 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eec79ea9-a87d-453d-8ac3-1c50676253c1")
+		(property "Reference" "H103"
+			(at 46.99 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 46.99 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 44.45 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 44.45 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 44.45 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(reference "H103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 83.185 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "effc7f85-c94b-4eec-9095-c153d9268660")
+		(property "Reference" "H106"
+			(at 85.725 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M3"
+			(at 85.725 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 83.185 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.185 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 83.185 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(reference "H106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 109.855 45.72)
+		(size 36.195 56.515)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "02ab86d0-6a73-43f0-a2e2-fa1962166526")
+		(property "Sheetname" "MCU"
+			(at 109.855 45.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCU.kicad_sch"
+			(at 109.855 102.8196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "NRST" bidirectional
+			(at 146.05 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f86ccd19-440a-4d3a-9d4e-3b70778d698a")
+		)
+		(pin "SPI_~{SS}" output
+			(at 146.05 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f87bd7f2-0126-4112-b07b-dd454c241eda")
+		)
+		(pin "SPI_MISO" input
+			(at 146.05 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "8f5f1429-8385-466c-8740-0863acc37ce2")
+		)
+		(pin "SPI_CLK" output
+			(at 146.05 52.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1173a6f3-6998-4443-8494-72c3d4ed6a23")
+		)
+		(pin "RMII_MDC" bidirectional
+			(at 146.05 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "b0ece4a8-d166-4b0d-a946-ba281a961b44")
+		)
+		(pin "RMII_RXD1" bidirectional
+			(at 146.05 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ebcca4cb-e80b-4421-be1a-152cc97edbe9")
+		)
+		(pin "RMII_RXD0" bidirectional
+			(at 146.05 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a1ae9aa6-3561-4888-bfc6-04827c4a4ea0")
+		)
+		(pin "RMII_TXEN" bidirectional
+			(at 146.05 85.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e0af6b07-14ea-456a-b993-4489d14cf3e8")
+		)
+		(pin "RMII_TXD0" bidirectional
+			(at 146.05 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "00e0b3d3-1d58-455c-bf69-e75e8f55f829")
+		)
+		(pin "RMII_TXD1" bidirectional
+			(at 146.05 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3c3589f2-e6e4-4d67-bf7a-bc946484a880")
+		)
+		(pin "RMII_MDIO" bidirectional
+			(at 146.05 78.105 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c93b3ca8-0c27-43fc-826d-304c7d33bf16")
+		)
+		(pin "REF_CLK" bidirectional
+			(at 146.05 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "18deba75-dff1-4050-bdce-e633b15f8402")
+		)
+		(pin "RMII_CRS_DV" bidirectional
+			(at 146.05 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "20e3ebf0-04c6-467c-aac0-48ac89704683")
+		)
+		(pin "LEP_VSYNC" input
+			(at 146.05 57.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "514aa5aa-66c4-43c3-9d70-778cb66d0f94")
+		)
+		(pin "LEP_~{RST}" output
+			(at 146.05 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "aa5a0fcc-5849-4749-9d3b-af322593a108")
+		)
+		(pin "I2C4_SCL" bidirectional
+			(at 146.05 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "73809186-a9e7-401b-8f4f-de599f1fcaba")
+		)
+		(pin "I2C4_SDA" bidirectional
+			(at 146.05 62.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "41c031d1-9ec3-4970-83ba-a491dd997fd6")
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 109.855 108.585)
+		(size 67.31 22.225)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4d9d56a2-71e1-4d23-be79-82b284e5fab1")
+		(property "Sheetname" "Power"
+			(at 109.855 107.8734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 109.855 131.3946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 151.13 74.93)
+		(size 26.035 27.305)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5a701738-cd49-49a3-a155-1a9f780a319a")
+		(property "Sheetname" "Ethernet"
+			(at 151.13 74.2184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Ethernet.kicad_sch"
+			(at 151.13 102.8196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "RMII_MDIO" bidirectional
+			(at 151.13 78.105 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "ebc6f962-f3d7-43d7-a0ac-ec1a793d9211")
+		)
+		(pin "RMII_CRS_DV" bidirectional
+			(at 151.13 80.01 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f0069632-0a9d-4682-8af2-384ed764ed75")
+		)
+		(pin "REF_CLK" bidirectional
+			(at 151.13 81.915 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "69f33059-4002-4b52-b913-b2da4fee8744")
+		)
+		(pin "RMII_MDC" bidirectional
+			(at 151.13 83.82 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3196a146-f6ba-4f24-87e5-6bfd98748890")
+		)
+		(pin "NRST" bidirectional
+			(at 151.13 99.06 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "d4c8ce3d-b286-4f1c-8897-ee0a40ba9fdb")
+		)
+		(pin "RMII_TXD1" bidirectional
+			(at 151.13 90.805 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "6b196bd9-45b9-45c4-bb44-817741b111f6")
+		)
+		(pin "RMII_RXD0" bidirectional
+			(at 151.13 93.98 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f243f79d-6647-4465-bf43-a55d19d35ae9")
+		)
+		(pin "RMII_TXEN" bidirectional
+			(at 151.13 85.725 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "90ef2004-cfd8-45bf-8917-d5c9ce491d58")
+		)
+		(pin "RMII_TXD0" bidirectional
+			(at 151.13 88.9 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "bda54888-4191-4ea0-9b1e-9a13aa8251e8")
+		)
+		(pin "RMII_RXD1" bidirectional
+			(at 151.13 95.885 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3864134d-9e31-4ba4-8536-74aa60eb9be9")
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 151.13 45.72)
+		(size 26.035 22.225)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9bf6a537-6182-4846-99ae-dbab532f6139")
+		(property "Sheetname" "Lepton"
+			(at 151.13 45.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Lepton.kicad_sch"
+			(at 151.13 68.5296 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SPI_~{SS}" input
+			(at 151.13 50.8 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b3b3c326-689c-46c1-804d-f85afc7805d0")
+		)
+		(pin "SPI_MISO" output
+			(at 151.13 54.61 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7874dbdc-0186-4fc7-b882-84e6dd28a2d1")
+		)
+		(pin "LEP_VSYNC" output
+			(at 151.13 57.785 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "72a64b66-1467-44d7-afb3-b7653736e180")
+		)
+		(pin "SPI_CLK" input
+			(at 151.13 52.705 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "281e32b5-f88c-4d08-a191-b163c10d1fff")
+		)
+		(pin "LEP_~{RST}" input
+			(at 151.13 59.69 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f14b4dc4-f072-449b-b25a-7ce032f7b4b6")
+		)
+		(pin "I2C4_SDA" bidirectional
+			(at 151.13 62.865 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "5b754bbb-9459-4450-bc73-fd9e8534cb76")
+		)
+		(pin "I2C4_SCL" bidirectional
+			(at 151.13 64.77 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b0d2bb79-245a-4b1b-875f-ba0f4376bfe0")
+		)
+		(instances
+			(project "ETH1IRCAM1"
+				(path "/f8ed47a9-95cb-42d4-bd7f-c1b2ff57d6fd"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
 )
