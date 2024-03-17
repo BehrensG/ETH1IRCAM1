@@ -453,13 +453,7 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "Net-(D201-A)": "power 24V",
-      "Net-(D201-K)": "power 24V",
-      "Net-(D202-K)": "power 24V",
-      "Net-(J201-Pin_1)": "power 24V",
-      "Net-(Q201-D)": "power 24V"
-    },
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
