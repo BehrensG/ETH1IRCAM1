@@ -50,7 +50,7 @@ void BSP_Init_DefualtEEPROM()
 	bsp.eeprom.structure.ip4_static.netmask[3] = NETMASK_ADDRESS_3;
 
 	bsp.eeprom.structure.ip4_static.tcp_port = 2000;
-	bsp.eeprom.structure.ip4_static.udp_port = 16384;
+	bsp.eeprom.structure.ip4_static.udp_port = 2000;
 
 	strncpy(bsp.eeprom.structure.service.password, PASSWORD, STRING_LENGTH);
 	strncpy(bsp.eeprom.structure.info.serial_number, SCPI_IDN4, STRING_LENGTH);
